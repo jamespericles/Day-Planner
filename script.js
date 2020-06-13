@@ -1,15 +1,18 @@
 $(document).ready(function () {
   // Variables
-  // const dateDisplay = $("#currentDay");
 
-  //   Update DOM
-  let timer = setInterval(updateTime, 1000);
+  let currentTime = setInterval(updateTime, 1000);
   function updateTime() {
     const time = moment();
     const eDisplayMoment = document.getElementById("currentDay");
     eDisplayMoment.innerHTML = time.format("M-D-YYYY hh:mm:ss");
   }
+
+  // Load time immediately
   updateTime();
+
+  //   Update DOM
+
   function updateDOM() {
     //   Specific handlers for each text input field
     let savedEvent9am = localStorage.getItem("9am");
@@ -64,5 +67,12 @@ $(document).ready(function () {
       //   Update DOM after user saves new event
       updateDOM();
     });
+  }
+
+  // Check if current time is past, present, or future
+  function checkStanding() {
+    // if else statements using isBefore() isAfter() isSame() to append classes for each time block
+    // if isSame === True, add present class, if isSame === False, check if isAfter is true or if isSame is trye
+    // append respective class for each time block
   }
 });
