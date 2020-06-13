@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  const dateDisplay = $("#currentDay");
+  const time = moment();
+  console.log(time);
   function updateDOM() {
     let savedEvent9am = localStorage.getItem("9am");
     let display9am = $("#display9am");
