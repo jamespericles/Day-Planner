@@ -3,7 +3,7 @@ $(document).ready(function () {
   // const dateDisplay = $("#currentDay");
   const time = moment();
   const eDisplayMoment = document.getElementById("currentDay");
-  eDisplayMoment.innerHTML = time;
+  eDisplayMoment.innerHTML = time.format("M-D-YYYY hh:mm:ss");
 
   //   Update DOM
   function updateDOM() {
