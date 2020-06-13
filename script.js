@@ -1,11 +1,14 @@
 $(document).ready(function () {
   // Variables
   // const dateDisplay = $("#currentDay");
-  const time = moment();
-  const eDisplayMoment = document.getElementById("currentDay");
-  eDisplayMoment.innerHTML = time.format("M-D-YYYY hh:mm:ss");
 
   //   Update DOM
+  function updateTime() {
+    const time = moment();
+    const eDisplayMoment = document.getElementById("currentDay");
+    eDisplayMoment.innerHTML = time.format("M-D-YYYY hh:mm:ss");
+  }
+  updateTime();
   function updateDOM() {
     //   Specific handlers for each text input field
     let savedEvent9am = localStorage.getItem("9am");
