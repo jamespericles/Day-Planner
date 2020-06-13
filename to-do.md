@@ -10,8 +10,10 @@ PRIMARY GOALS
 
 SECONDARY GOALS
 
-- Display current time (XX:XX:XX)
+<!-- - Display current time (XX:XX:XX) -->
+
 - Have timeblock style change as time progresses (similar to loading bar where the color of the block fills from present to future as clock continues, probably too challenging given the time)
 - Add button to edit or delete event besides adding
 - Make user aware their edit has been saved
 - Possibly link native calendar apps on users computer with the ability to write events created in website?
+- Allow user to add multiple events
