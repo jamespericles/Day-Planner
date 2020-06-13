@@ -2,7 +2,6 @@ $(document).ready(function () {
   // Variables
   const dateDisplay = $("#currentDay");
   const time = moment();
-  console.log(time);
 
   //   Update DOM
   function updateDOM() {
