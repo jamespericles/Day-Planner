@@ -1,7 +1,8 @@
 PRIMARY GOALS
 
-- When the planner is opened, the current day is displayed
+<!-- - When the planner is opened, the current day is displayed -->
 <!-- - Scrolling down presents user with timeblocks for standard business hours -->
+
 - Each timeblock is color coded to indicate past, present or future
   <!-- - When user clicks timeblock they can add an event -->
   <!-- - User is able to save event to timeblock (local storage) -->
