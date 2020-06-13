@@ -1,8 +1,12 @@
 $(document).ready(function () {
+  // Variables
   const dateDisplay = $("#currentDay");
   const time = moment();
   console.log(time);
+
+  //   Update DOM
   function updateDOM() {
+    //   Specific handlers for each text input field
     let savedEvent9am = localStorage.getItem("9am");
     let display9am = $("#display9am");
     display9am.html(savedEvent9am);
@@ -39,6 +43,7 @@ $(document).ready(function () {
     let display5pm = $("#display5pm");
     display5pm.html(savedEvent5pm);
   }
+  //   Execute update function before listening for more user input
   updateDOM();
   const saveBtns = $(".saveBtn");
 
@@ -49,10 +54,10 @@ $(document).ready(function () {
       let newValue = parentElement.children()[0].value;
       localStorage.setItem(id, newValue);
       let input = parentElement.children()[0];
+      //   Clear textfield after user saves event
       input.value = "";
+      //   Update DOM after user saves new event
       updateDOM();
-      //   console.log(localStorage);
     });
   }
-  //   console.log(saveBtns);
 });
