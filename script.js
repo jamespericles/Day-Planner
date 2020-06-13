@@ -1,7 +1,9 @@
 $(document).ready(function () {
   // Variables
-  const dateDisplay = $("#currentDay");
+  // const dateDisplay = $("#currentDay");
   const time = moment();
+  const eDisplayMoment = document.getElementById("currentDay");
+  eDisplayMoment.innerHTML = time;
 
   //   Update DOM
   function updateDOM() {
