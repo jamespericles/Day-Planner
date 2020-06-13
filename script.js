@@ -45,6 +45,8 @@ $(document).ready(function () {
       let parentElement = $(`#timeBlock${id}`);
       let newValue = parentElement.children()[0].value;
       localStorage.setItem(id, newValue);
+
+      updateDOM();
       //   console.log(localStorage);
     });
   }
