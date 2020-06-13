@@ -3,6 +3,7 @@ $(document).ready(function () {
   // const dateDisplay = $("#currentDay");
 
   //   Update DOM
+  let timer = setInterval(updateTime, 1000);
   function updateTime() {
     const time = moment();
     const eDisplayMoment = document.getElementById("currentDay");
