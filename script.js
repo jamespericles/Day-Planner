@@ -10,24 +10,49 @@ $(document).ready(function () {
   }
 
   let colorFormatter = setInterval(checkHour, 1000);
-  console.log(currentHour);
-  console.log(tag9HourVal);
+
   function checkHour() {
     let h2_9Tag = document.getElementById("9");
-    let h2_10Tag = document.getElementById("10");
-    let h2_11Tag = document.getElementById("11");
-    let h2_12Tag = document.getElementById("12");
-    let h2_1Tag = document.getElementById("1");
-    let h2_2Tag = document.getElementById("2");
-    let h2_3Tag = document.getElementById("3");
-    let h2_4Tag = document.getElementById("4");
-    let h2_5Tag = document.getElementById("5");
-
     let tag9Hour = h2_9Tag.textContent.split(":");
     let tag9HourVal = tag9Hour[0];
+
+    let h2_10Tag = document.getElementById("10");
+    let tag10Hour = h2_10Tag.textContent.split(":");
+    let tag10HourVal = tag10Hour[0];
+
+    let h2_11Tag = document.getElementById("11");
+    let tag11Hour = h2_11Tag.textContent.split(":");
+    let tag11HourVal = tag11Hour[0];
+
+    let h2_12Tag = document.getElementById("12");
+    let tag12Hour = h2_12Tag.textContent.split(":");
+    let tag12HourVal = tag12Hour[0];
+
+    let h2_1Tag = document.getElementById("1");
+    let tag1Hour = h2_1Tag.textContent.split(":");
+    let tag1HourVal = tag1Hour[0];
+
+    let h2_2Tag = document.getElementById("2");
+    let tag2Hour = h2_2Tag.textContent.split(":");
+    let tag2HourVal = tag2Hour[0];
+
+    let h2_3Tag = document.getElementById("3");
+    let tag3Hour = h2_3Tag.textContent.split(":");
+    let tag3HourVal = tag3Hour[0];
+
+    let h2_4Tag = document.getElementById("4");
+    let tag4Hour = h2_4Tag.textContent.split(":");
+    let tag4HourVal = tag4Hour[0];
+
+    let h2_5Tag = document.getElementById("5");
+    let tag5Hour = h2_5Tag.textContent.split(":");
+    let tag5HourVal = tag5Hour[0];
+
     const hour = moment().format("LT");
     let localTime = hour.split(":");
     let currentHour = localTime[0];
+    console.log(currentHour);
+    console.log(tag9HourVal);
   }
   checkHour();
   // Load time immediately
