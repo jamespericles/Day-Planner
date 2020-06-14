@@ -3,17 +3,13 @@ $(document).ready(function () {
 
   setInterval(updateTime, 1000);
   setInterval(checkHour, 1000);
+
+  // Call and display the time using moment.js
   function updateTime() {
     const time = moment();
     const eDisplayMoment = document.getElementById("currentDay");
     eDisplayMoment.innerHTML = time.format("M-D-YYYY hh:mm:ss");
   }
-
-  // Function to compare hour string for each block and hour string of current time
-  // Changes class for each <li> based on their boolean value
-  // function colorFormatter() {
-
-  // }
 
   // Create array from the string in <h2> elements
   // Split the value at the colon to compare just the hour of <li> to current hour
