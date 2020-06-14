@@ -59,18 +59,23 @@ $(document).ready(function () {
     let localTime = hour.split(":");
     let currentHour = localTime[0];
 
-    // function colorFormatter() {
-    if (tag9HourVal <= currentHour) {
-      $("timeBlock9am").toggleClass("past");
-    } else if (tag9HourVal == currentHour) {
-      $("timeBlock9am").toggleClass("present");
-    } else if (tag9HourVal >= currentHour) {
-      $("timeBlock9am").toggleClass("future");
-    }
-    console.log(tag9HourVal);
-    console.log(currentHour);
-    console.log(timeBlock9am);
-    console.log(tag9HourVal == currentHour);
+    //not sure why this didnt work
+    // if (tag9HourVal <= currentHour) {
+    //   $("timeBlock9am").toggleClass("past");
+    // } else if (tag9HourVal == currentHour) {
+    //   $("#timeBlock9am").addClass(".present");
+    // } else if (tag9HourVal >= currentHour) {
+    //   $("timeBlock9am").toggleClass("future");
+    // }
+
+    // Check whether the time is in the past, present, or future, append the appropriate class
+    $("#timeBlock9am").addClass("past", tag9HourVal >= currentHour);
+    $("#timeBlock9am").addClass("present", tag9HourVal == currentHour);
+    $("#timeBlock9am").addClass("future", tag9HourVal <= currentHour);
+
+    $("#timeBlock9am").addClass("past", tag9HourVal >= currentHour);
+    $("#timeBlock9am").addClass("present", tag9HourVal == currentHour);
+    $("#timeBlock9am").addClass("future", tag9HourVal <= currentHour);
   }
   checkHour();
   // Load time immediately
