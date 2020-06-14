@@ -73,9 +73,37 @@ $(document).ready(function () {
     $("#timeBlock9am").addClass("present", tag9HourVal == currentHour);
     $("#timeBlock9am").addClass("future", tag9HourVal <= currentHour);
 
-    $("#timeBlock9am").addClass("past", tag9HourVal >= currentHour);
-    $("#timeBlock9am").addClass("present", tag9HourVal == currentHour);
-    $("#timeBlock9am").addClass("future", tag9HourVal <= currentHour);
+    $("#timeBlock10am").addClass("past", tag10HourVal >= currentHour);
+    $("#timeBlock10am").addClass("present", tag10HourVal == currentHour);
+    $("#timeBlock10am").addClass("future", tag10HourVal <= currentHour);
+
+    $("#timeBlock11am").addClass("past", tag11HourVal >= currentHour);
+    $("#timeBlock11am").addClass("present", tag11HourVal == currentHour);
+    $("#timeBlock11am").addClass("future", tag11HourVal <= currentHour);
+
+    $("#timeBlock12pm").addClass("past", tag12HourVal >= currentHour);
+    $("#timeBlock12pm").addClass("present", tag12HourVal == currentHour);
+    $("#timeBlock12pm").addClass("future", tag12HourVal <= currentHour);
+
+    $("#timeBlock1pm").addClass("past", tag1HourVal >= currentHour);
+    $("#timeBlock1pm").addClass("present", tag1HourVal == currentHour);
+    $("#timeBlock1pm").addClass("future", tag1HourVal <= currentHour);
+
+    $("#timeBlock2pm").addClass("past", tag2HourVal >= currentHour);
+    $("#timeBlock2pm").addClass("present", tag2HourVal == currentHour);
+    $("#timeBlock2pm").addClass("future", tag2HourVal <= currentHour);
+
+    $("#timeBlock3pm").addClass("past", tag3HourVal >= currentHour);
+    $("#timeBlock3pm").addClass("present", tag3HourVal == currentHour);
+    $("#timeBlock3pm").addClass("future", tag3HourVal <= currentHour);
+
+    $("#timeBlock4pm").addClass("past", tag4HourVal >= currentHour);
+    $("#timeBlock4pm").addClass("present", tag4HourVal == currentHour);
+    $("#timeBlock4pm").addClass("future", tag4HourVal <= currentHour);
+
+    $("#timeBlock5pm").addClass("past", tag5HourVal >= currentHour);
+    $("#timeBlock5pm").addClass("present", tag5HourVal == currentHour);
+    $("#timeBlock5pm").addClass("future", tag5HourVal <= currentHour);
   }
   checkHour();
   // Load time immediately
