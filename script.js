@@ -139,6 +139,12 @@ $(document).ready(function () {
     } else if ("#timeBlock5pm" < currentHour) {
       $("#timeBlock5pm").addClass("future", tag5HourVal < currentHour);
     }
+
+    // Recombine currentHour because we need to
+    // specify if we're past 5pm rather than comparing just the hour "5"
+    currentHour = localTime.join();
+    $("#timeBlock9am").removeClass("future", currentHour >= "5,00 PM");
+    $("#timeBlock9am").addClass("past", currentHour >= "5,00 PM");
   }
 
   // Load time immediately, check hour related to timeblock value and current time
