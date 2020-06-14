@@ -56,6 +56,10 @@ $(document).ready(function () {
     let currentHour = localTime[0];
 
     // Check whether the time is in the past, present, or future, append the appropriate class
+
+    // $("#timeBlock1pm").removeClass("future", currentHour >= tag1HourVal);
+    // $("#timeBlock1pm").addClass("past", currentHour >= tag1HourVal);
+    // $("#timeBlock1pm").removeClass("future", currentHour >= tag1HourVal);
     if ("#timeBlock9am" == currentHour) {
       $("#timeBlock9am").addClass("present", tag9HourVal == currentHour);
     } else if ("#timeBlock9am" > currentHour) {
