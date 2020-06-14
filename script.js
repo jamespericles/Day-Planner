@@ -105,12 +105,12 @@ $(document).ready(function () {
     $("#timeBlock5pm").addClass("present", tag5HourVal == currentHour);
     $("#timeBlock5pm").addClass("future", tag5HourVal <= currentHour);
   }
-  checkHour();
-  // Load time immediately
-  updateTime();
-  checkStanding();
 
-  //   Update DOM
+  // Load time immediately, check hour related to timeblock value and current time
+  updateTime();
+  checkHour();
+
+  // Update DOM
 
   function updateDOM() {
     //   Specific handlers for each text input field
@@ -167,10 +167,4 @@ $(document).ready(function () {
       updateDOM();
     });
   }
-  function checkStanding() {}
-  // Check if current time is past, present, or future
-
-  // if else statements using isBefore() isAfter() isSame() to append classes for each time block
-  // if isSame === True, add present class, if isSame === False, check if isAfter is true or if isSame is trye
-  // append respective class for each time block
 });
