@@ -2,7 +2,7 @@ $(document).ready(function () {
   // Variables
 
   setInterval(updateTime, 1000);
-  setInterval(colorFormatter, 1000);
+  setInterval(checkHour, 1000);
   function updateTime() {
     const time = moment();
     const eDisplayMoment = document.getElementById("currentDay");
@@ -14,8 +14,6 @@ $(document).ready(function () {
   // function colorFormatter() {
 
   // }
-
-  function colorFormatter() {}
 
   // Create array from the string in <h2> elements
   // Split the value at the colon to compare just the hour of <li> to current hour
@@ -60,6 +58,19 @@ $(document).ready(function () {
     const hour = moment().format("LT");
     let localTime = hour.split(":");
     let currentHour = localTime[0];
+
+    // function colorFormatter() {
+    if (tag9HourVal <= currentHour) {
+      $("timeBlock9am").toggleClass("past");
+    } else if (tag9HourVal == currentHour) {
+      $("timeBlock9am").toggleClass("present");
+    } else if (tag9HourVal >= currentHour) {
+      $("timeBlock9am").toggleClass("future");
+    }
+    console.log(tag9HourVal);
+    console.log(currentHour);
+    console.log(timeBlock9am);
+    console.log(tag9HourVal == currentHour);
   }
   checkHour();
   // Load time immediately
