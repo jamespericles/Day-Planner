@@ -2,14 +2,37 @@ $(document).ready(function () {
   // Variables
 
   let currentTime = setInterval(updateTime, 1000);
+
   function updateTime() {
     const time = moment();
     const eDisplayMoment = document.getElementById("currentDay");
     eDisplayMoment.innerHTML = time.format("M-D-YYYY hh:mm:ss");
   }
 
+  let colorFormatter = setInterval(checkHour, 1000);
+  console.log(currentHour);
+  console.log(tag9HourVal);
+  function checkHour() {
+    let h2_9Tag = document.getElementById("9");
+    let h2_10Tag = document.getElementById("10");
+    let h2_11Tag = document.getElementById("11");
+    let h2_12Tag = document.getElementById("12");
+    let h2_1Tag = document.getElementById("1");
+    let h2_2Tag = document.getElementById("2");
+    let h2_3Tag = document.getElementById("3");
+    let h2_4Tag = document.getElementById("4");
+    let h2_5Tag = document.getElementById("5");
+
+    let tag9Hour = h2_9Tag.textContent.split(":");
+    let tag9HourVal = tag9Hour[0];
+    const hour = moment().format("LT");
+    let localTime = hour.split(":");
+    let currentHour = localTime[0];
+  }
+  checkHour();
   // Load time immediately
   updateTime();
+  checkStanding();
 
   //   Update DOM
 
@@ -68,11 +91,10 @@ $(document).ready(function () {
       updateDOM();
     });
   }
-
+  function checkStanding() {}
   // Check if current time is past, present, or future
-  function checkStanding() {
-    // if else statements using isBefore() isAfter() isSame() to append classes for each time block
-    // if isSame === True, add present class, if isSame === False, check if isAfter is true or if isSame is trye
-    // append respective class for each time block
-  }
+
+  // if else statements using isBefore() isAfter() isSame() to append classes for each time block
+  // if isSame === True, add present class, if isSame === False, check if isAfter is true or if isSame is trye
+  // append respective class for each time block
 });
