@@ -54,20 +54,8 @@ $(document).ready(function () {
     const hour = moment().format("LT");
     let localTime = hour.split(":");
     let currentHour = localTime[0];
-    // (below incase need to integer values)
-    // currentHour = parseInt($("localTime[0]"));
-    // tag9HourVal = parseInt($("h2_9Tag"), 9);
-    //not sure why this didnt work
-    // if (tag9HourVal <= currentHour) {
-    //   $("timeBlock9am").toggleClass("past");
-    // } else if (tag9HourVal == currentHour) {
-    //   $("#timeBlock9am").addClass(".present");
-    // } else if (tag9HourVal >= currentHour) {
-    //   $("timeBlock9am").toggleClass("future");
-    // }
 
     // Check whether the time is in the past, present, or future, append the appropriate class
-
     if ("#timeBlock9am" == currentHour) {
       $("#timeBlock9am").addClass("present", tag9HourVal == currentHour);
     } else if ("#timeBlock9am" > currentHour) {
