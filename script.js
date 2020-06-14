@@ -54,8 +54,9 @@ $(document).ready(function () {
     const hour = moment().format("LT");
     let localTime = hour.split(":");
     let currentHour = localTime[0];
+    // (below incase need to integer values)
     // currentHour = parseInt($("localTime[0]"));
-
+    // tag9HourVal = parseInt($("h2_9Tag"), 9);
     //not sure why this didnt work
     // if (tag9HourVal <= currentHour) {
     //   $("timeBlock9am").toggleClass("past");
@@ -66,7 +67,7 @@ $(document).ready(function () {
     // }
 
     // Check whether the time is in the past, present, or future, append the appropriate class
-    // tag9HourVal = parseInt($("h2_9Tag"), 9);
+
     if ("#timeBlock9am" == currentHour) {
       $("#timeBlock9am").addClass("present", tag9HourVal == currentHour);
     } else if ("#timeBlock9am" > currentHour) {
@@ -75,44 +76,69 @@ $(document).ready(function () {
       $("#timeBlock9am").addClass("future", tag9HourVal < currentHour);
     }
 
-    console.log(timeBlock9am);
-    console.log(tag9HourVal);
-    console.log(currentHour);
-    console.log(typeof tag9HourVal);
-    console.log(typeof currentHour);
-    console.log(tag9HourVal > currentHour);
+    if ("#timeBlock10am" == currentHour) {
+      $("#timeBlock10am").addClass("present", tag10HourVal == currentHour);
+    } else if ("#timeBlock10am" > currentHour) {
+      $("#timeBlock10am").addClass("past", tag10HourVal > currentHour);
+    } else if ("#timeBlock10am" < currentHour) {
+      $("#timeBlock10am").addClass("future", tag10HourVal < currentHour);
+    }
 
-    $("#timeBlock10am").addClass("past", tag10HourVal >= currentHour);
-    $("#timeBlock10am").addClass("present", tag10HourVal == currentHour);
-    $("#timeBlock10am").addClass("future", tag10HourVal <= currentHour);
+    if ("#timeBlock11am" == currentHour) {
+      $("#timeBlock11am").addClass("present", tag11HourVal == currentHour);
+    } else if ("#timeBlock11am" > currentHour) {
+      $("#timeBlock11am").addClass("past", tag11HourVal > currentHour);
+    } else if ("#timeBlock11am" < currentHour) {
+      $("#timeBlock11am").addClass("future", tag11HourVal < currentHour);
+    }
 
-    $("#timeBlock11am").addClass("past", tag11HourVal >= currentHour);
-    $("#timeBlock11am").addClass("present", tag11HourVal == currentHour);
-    $("#timeBlock11am").addClass("future", tag11HourVal <= currentHour);
+    if ("#timeBlock12pm" == currentHour) {
+      $("#timeBlock12pm").addClass("present", tag12HourVal == currentHour);
+    } else if ("#timeBlock12pm" > currentHour) {
+      $("#timeBlock12pm").addClass("past", tag12HourVal > currentHour);
+    } else if ("#timeBlock12pm" < currentHour) {
+      $("#timeBlock12pm").addClass("future", tag12HourVal < currentHour);
+    }
 
-    $("#timeBlock12pm").addClass("past", tag12HourVal >= currentHour);
-    $("#timeBlock12pm").addClass("present", tag12HourVal == currentHour);
-    $("#timeBlock12pm").addClass("future", tag12HourVal <= currentHour);
+    if ("#timeBlock1pm" == currentHour) {
+      $("#timeBlock1pm").addClass("present", tag1HourVal == currentHour);
+    } else if ("#timeBlock1pm" > currentHour) {
+      $("#timeBlock1pm").addClass("past", tag1HourVal > currentHour);
+    } else if ("#timeBlock1pm" < currentHour) {
+      $("#timeBlock1pm").addClass("future", tag1HourVal < currentHour);
+    }
 
-    $("#timeBlock1pm").addClass("past", tag1HourVal >= currentHour);
-    $("#timeBlock1pm").addClass("present", tag1HourVal == currentHour);
-    $("#timeBlock1pm").addClass("future", tag1HourVal <= currentHour);
+    if ("#timeBlock2pm" == currentHour) {
+      $("#timeBlock2pm").addClass("present", tag2HourVal == currentHour);
+    } else if ("#timeBlock2pm" > currentHour) {
+      $("#timeBlock2pm").addClass("past", tag2HourVal > currentHour);
+    } else if ("#timeBlock2pm" < currentHour) {
+      $("#timeBlock2pm").addClass("future", tag2HourVal < currentHour);
+    }
 
-    $("#timeBlock2pm").addClass("past", tag2HourVal >= currentHour);
-    $("#timeBlock2pm").addClass("present", tag2HourVal == currentHour);
-    $("#timeBlock2pm").addClass("future", tag2HourVal <= currentHour);
+    if ("#timeBlock3pm" == currentHour) {
+      $("#timeBlock3pm").addClass("present", tag3HourVal == currentHour);
+    } else if ("#timeBlock3pm" > currentHour) {
+      $("#timeBlock3pm").addClass("past", tag3HourVal > currentHour);
+    } else if ("#timeBlock3pm" < currentHour) {
+      $("#timeBlock3pm").addClass("future", tag3HourVal < currentHour);
+    }
 
-    $("#timeBlock3pm").addClass("past", tag3HourVal >= currentHour);
-    $("#timeBlock3pm").addClass("present", tag3HourVal == currentHour);
-    $("#timeBlock3pm").addClass("future", tag3HourVal <= currentHour);
+    if ("#timeBlock4pm" == currentHour) {
+      $("#timeBlock4pm").addClass("present", tag4HourVal == currentHour);
+    } else if ("#timeBlock4pm" > currentHour) {
+      $("#timeBlock4pm").addClass("past", tag4HourVal > currentHour);
+    } else if ("#timeBlock4pm" < currentHour) {
+      $("#timeBlock4pm").addClass("future", tag4HourVal < currentHour);
+    }
 
-    $("#timeBlock4pm").addClass("past", tag4HourVal >= currentHour);
-    $("#timeBlock4pm").addClass("present", tag4HourVal == currentHour);
-    $("#timeBlock4pm").addClass("future", tag4HourVal <= currentHour);
-
-    $("#timeBlock5pm").addClass("past", tag5HourVal >= currentHour);
-    $("#timeBlock5pm").addClass("present", tag5HourVal == currentHour);
-    $("#timeBlock5pm").addClass("future", tag5HourVal <= currentHour);
+    if ("#timeBlock5pm" == currentHour) {
+      $("#timeBlock5pm").addClass("present", tag5HourVal == currentHour);
+    } else if ("#timeBlock5pm" > currentHour) {
+      $("#timeBlock5pm").addClass("past", tag5HourVal > currentHour);
+    } else if ("#timeBlock5pm" < currentHour) {
+      $("#timeBlock5pm").addClass("future", tag5HourVal < currentHour);
+    }
   }
 
   // Load time immediately, check hour related to timeblock value and current time
