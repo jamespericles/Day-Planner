@@ -54,12 +54,13 @@ $(document).ready(function () {
     const hour = moment().format("LT");
     let localTime = hour.split(":");
     let currentHour = localTime[0];
-
+    currentHour = "1";
+    console.log(currentHour);
     // Check whether the time is in the past, present, or future, append the appropriate class
 
-    // $("#timeBlock1pm").removeClass("future", currentHour >= tag1HourVal);
-    // $("#timeBlock1pm").addClass("past", currentHour >= tag1HourVal);
-    // $("#timeBlock1pm").removeClass("future", currentHour >= tag1HourVal);
+    $("#timeBlock1pm").removeClass("future", currentHour >= tag1HourVal);
+    $("#timeBlock1pm").addClass("past", currentHour <= tag1HourVal);
+    $("#timeBlock1pm").removeClass("present", currentHour == tag1HourVal);
     if ("#timeBlock9am" == currentHour) {
       $("#timeBlock9am").addClass("present", tag9HourVal == currentHour);
     } else if ("#timeBlock9am" > currentHour) {
