@@ -145,6 +145,38 @@ $(document).ready(function () {
     currentHour = localTime.join();
     $("#timeBlock9am").removeClass("future", currentHour >= "5,00 PM");
     $("#timeBlock9am").addClass("past", currentHour >= "5,00 PM");
+
+    currentHour = localTime.join();
+    $("#timeBlock10am").removeClass("future", currentHour >= "5,00 PM");
+    $("#timeBlock10am").addClass("past", currentHour >= "5,00 PM");
+
+    currentHour = localTime.join();
+    $("#timeBlock11am").removeClass("future", currentHour >= "5,00 PM");
+    $("#timeBlock11am").addClass("past", currentHour >= "5,00 PM");
+
+    currentHour = localTime.join();
+    $("#timeBlock12pm").removeClass("future", currentHour >= "5,00 PM");
+    $("#timeBlock12pm").addClass("past", currentHour >= "5,00 PM");
+
+    currentHour = localTime.join();
+    $("#timeBlock1pm").removeClass("future", currentHour >= "5,00 PM");
+    $("#timeBlock1pm").addClass("past", currentHour >= "5,00 PM");
+
+    currentHour = localTime.join();
+    $("#timeBlock2pm").removeClass("future", currentHour >= "5,00 PM");
+    $("#timeBlock2pm").addClass("past", currentHour >= "5,00 PM");
+
+    currentHour = localTime.join();
+    $("#timeBlock3pm").removeClass("future", currentHour >= "5,00 PM");
+    $("#timeBlock3pm").addClass("past", currentHour >= "5,00 PM");
+
+    currentHour = localTime.join();
+    $("#timeBlock4pm").removeClass("future", currentHour >= "5,00 PM");
+    $("#timeBlock4pm").addClass("past", currentHour >= "5,00 PM");
+
+    currentHour = localTime.join();
+    $("#timeBlock5pm").removeClass("future", currentHour >= "5,00 PM");
+    $("#timeBlock5pm").addClass("past", currentHour >= "5,00 PM");
   }
 
   // Load time immediately, check hour related to timeblock value and current time
