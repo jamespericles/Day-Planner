@@ -4,12 +4,12 @@ $(document).ready(function () {
   setInterval(updateTime, 1000);
   setInterval(checkHour, 1000);
   const d = new Date();
+  // Retrieve time in military time so that classes are appended and removed correctly, accounting for am vs pm
   const n = d.getHours();
 
   // Call and display the time using moment.js
   function updateTime() {
     const time = moment();
-    console.log(n);
     const eDisplayMoment = document.getElementById("currentDay");
     eDisplayMoment.innerHTML = time.format("M-D-YYYY hh:mm:ss");
   }
