@@ -54,11 +54,8 @@ $(document).ready(function () {
     let tag5Hour = h2_5Tag.textContent.split(":");
     let tag5HourVal = parseInt(tag5Hour) + 12;
 
-    // Formats time into (h:mm), split at the colon to focus only on the hour
-    // const hour = moment().format("LT");
-    // let localTime = hour.split(":");
     let currentHour = n;
-    // Check whether the time is in the past, present, or future, append the appropriate class
+    // Check whether the time is in the past, present, or future, append and remove the appropriate classes
 
     if (tag9HourVal === currentHour) {
       $("#timeBlock9am").addClass("present");
