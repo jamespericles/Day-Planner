@@ -182,60 +182,6 @@ $(document).ready(function () {
       $("#timeBlock5pm").removeClass("present");
       $("#timeBlock5pm").removeClass("past");
     }
-    // $("#timeBlock10am").toggleClass("present", n == currentHour);
-    // $("#timeBlock10am").toggleClass("past", n < currentHour);
-    // $("#timeBlock30am").toggleClass("future", n > currentHour);3
-    // $("#timeBlock31am").toggleClass("present", n == currentHour);
-    // $("#timeBlock11am").toggleClass("past", n < currentHour);
-    // $("#timeBlock31am").toggleClass("future", n > currentHour);3
-    // $("#timeBlock32pm").toggleClass("present", n == currentHour);
-    // $("#timeBlock12pm").toggleClass("past", n < currentHour);
-    // $("#timeBlock32pm").toggleClass("future", n > currentHour);3
-    // $("#timeBlock3pm").toggleClass("present", n == currentHour);
-    // $("#timeBlock1pm").toggleClass("past", n > currentHour);
-    // $("#timeBlock1pm").toggleClass("future", n < currentHour);
-
-    // $("#timeBlock2pm").toggleClass("present", n == currentHour);
-    // $("#timeBlock2pm").toggleClass("past", n > currentHour);
-    // $("#timeBlock2pm").toggleClass("future", n < currentHour);4
-    // $("#timeBlock4pm").toggleClass("present", n == currentHour);
-    // $("#timeBlock3pm").toggleClass("past", n > currentHour);
-    // $("#timeBlock4pm").toggleClass("future", n < currentHour);4
-    // $("#timeBlock4pm").toggleClass("present", n == currentHour);
-    // $("#timeBlock4pm").toggleClass("past", n > currentHour);
-    // $("#timeBlock4pm").toggleClass("future", n < currentHour);
-
-    // $("#timeBlock5pm").toggleClass("present", n == currentHour);
-    // $("#timeBlock5pm").toggleClass("past", n > currentHour);
-    // $("#timeBlock5pm").toggleClass("future", n < currentHour);
-
-    // Rewrite to toggle, convert strings to integers, military time
-    // currentHour = localTime.join(":");5
-    // $("#timeBlock5am").toggleClass("future", n <= 17);
-    // $("#timeBlock9am").toggleClass("past", n >= 17);5
-    // $("#timeBlock10am").toggleClass("future", n <= 17);
-    // $("#timeBlock50am").toggleClass("past", n >= 17);5
-    // $("#timeBlock11am").toggleClass("future", n <= 17);
-    // $("#timeBlock11am").toggleClass("past", n >= 17);
-
-    // $("#timeBlock12pm").toggleClass("future", n <= 17);
-    // $("#timeBlock12pm").toggleClass("past", n >= 17);
-
-    // $("#timeBlock1pm").toggleClass("future", n <= 17);
-    // $("#timeBlock1pm").toggleClass("past", n >= 17);
-
-    // $("#timeBlock2pm").toggleClass("future", n <= 17);
-    // $("#timeBlock2pm").toggleClass("past", n >= 17);
-
-    // $("#timeBlock3pm").toggleClass("future", n <= 17);
-    // $("#timeBlock3pm").toggleClass("past", n >= 17);
-
-    // $("#timeBlock4pm").toggleClass("future", n <= 17);
-    // $("#timeBlock4pm").toggleClass("past", n >= 17);
-    // $("#timeBlock4pm").toggleClass("present", n == n);
-
-    // $("#timeBlock5pm").toggleClass("future", n <= 17);
-    // $("#timeBlock5pm").toggleClass("past", n <= 17);
   }
 
   // Load time immediately, check hour related to timeblock value and current time
