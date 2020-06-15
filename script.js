@@ -3,6 +3,8 @@ $(document).ready(function () {
 
   setInterval(updateTime, 1000);
   setInterval(checkHour, 1000);
+  const d = new Date();
+  const n = d.getHours();
 
   // Call and display the time using moment.js
   function updateTime() {
@@ -31,36 +33,46 @@ $(document).ready(function () {
     let tag12Hour = h2_12Tag.textContent.split(":");
     let tag12HourVal = parseInt(tag12Hour[0]);
 
-    let h2_1Tag = document.getElementById("1");
-    let tag1Hour = h2_1Tag.textContent.split(":");
-    let tag1HourVal = parseInt(tag1Hour[0]);
+    let h2_1Tag = document.getElementById("13");
+    let tag1Hour = h2_1Tag.textContent;
+    let tag1HourVal = parseInt(tag1Hour) + 12;
 
-    let h2_2Tag = document.getElementById("2");
+    let h2_2Tag = document.getElementById("14");
     let tag2Hour = h2_2Tag.textContent.split(":");
-    let tag2HourVal = parseInt(tag2Hour[0]);
+    let tag2HourVal = parseInt(tag2Hour) + 12;
 
-    let h2_3Tag = document.getElementById("3");
+    let h2_3Tag = document.getElementById("15");
     let tag3Hour = h2_3Tag.textContent.split(":");
-    let tag3HourVal = parseInt(tag3Hour[0]);
+    let tag3HourVal = parseInt(tag3Hour) + 12;
 
-    let h2_4Tag = document.getElementById("4");
+    let h2_4Tag = document.getElementById("16");
     let tag4Hour = h2_4Tag.textContent.split(":");
-    let tag4HourVal = parseInt(tag4Hour[0]);
+    let tag4HourVal = parseInt(tag4Hour) + 12;
 
-    let h2_5Tag = document.getElementById("5");
+    let h2_5Tag = document.getElementById("17");
     let tag5Hour = h2_5Tag.textContent.split(":");
-    let tag5HourVal = parseInt(tag5Hour[0]);
+    let tag5HourVal = parseInt(tag5Hour) + 12;
 
     // Formats time into (h:mm), split at the colon to focus only on the hour
-    const hour = moment().format("LT");
-    let localTime = hour.split(":");
-    let currentHour = localTime[0];
-    currentHour = 9;
+    // const hour = moment().format("LT");
+    // let localTime = hour.split(":");
+    let currentHour = n;
     // Check whether the time is in the past, present, or future, append the appropriate class
     $("#timeBlock9am").toggleClass("present", tag9HourVal == currentHour);
     $("#timeBlock9am").toggleClass("past", tag9HourVal > currentHour);
     $("#timeBlock9am").toggleClass("future", tag9HourVal < currentHour);
 
+    console.log(
+      tag9HourVal,
+      tag10HourVal,
+      tag11HourVal,
+      tag12HourVal,
+      tag1HourVal,
+      tag2HourVal,
+      tag3HourVal,
+      tag4HourVal,
+      tag5HourVal
+    );
     $("#timeBlock10am").toggleClass("present", tag10HourVal == currentHour);
     $("#timeBlock10am").toggleClass("past", tag10HourVal < currentHour);
     $("#timeBlock10am").toggleClass("future", tag10HourVal > currentHour);
@@ -96,32 +108,32 @@ $(document).ready(function () {
     // Rewrite to toggle, convert strings to integers, military time
     // currentHour = localTime.join(":");
 
-    // $("#timeBlock9am").removeClass("future", currentHour >= "5:00 PM");
-    // $("#timeBlock9am").addClass("past", currentHour >= "5:00 PM");
+    $("#timeBlock9am").toggleClass("future", currentHour >= 17);
+    $("#timeBlock9am").toggleClass("past", currentHour >= 17);
 
-    // $("#timeBlock10am").removeClass("future", currentHour >= "5:00 PM");
-    // $("#timeBlock10am").addClass("past", currentHour >= "5:00 PM");
+    $("#timeBlock10am").toggleClass("future", currentHour >= 17);
+    $("#timeBlock10am").toggleClass("past", currentHour >= 17);
 
-    // $("#timeBlock11am").removeClass("future", currentHour >= "5:00 PM");
-    // $("#timeBlock11am").addClass("past", currentHour >= "5:00 PM");
+    $("#timeBlock11am").toggleClass("future", currentHour >= 17);
+    $("#timeBlock11am").toggleClass("past", currentHour >= 17);
 
-    // $("#timeBlock12pm").removeClass("future", currentHour >= "5:00 PM");
-    // $("#timeBlock12pm").addClass("past", currentHour >= "5:00 PM");
+    $("#timeBlock12pm").toggleClass("future", currentHour >= 17);
+    $("#timeBlock12pm").toggleClass("past", currentHour >= 17);
 
-    // $("#timeBlock1pm").removeClass("future", currentHour >= "5:00 PM");
-    // $("#timeBlock1pm").addClass("past", currentHour >= "5:00 PM");
+    $("#timeBlock1pm").toggleClass("future", currentHour >= 17);
+    $("#timeBlock1pm").toggleClass("past", currentHour >= 17);
 
-    // $("#timeBlock2pm").removeClass("future", currentHour >= "5:00 PM");
-    // $("#timeBlock2pm").addClass("past", currentHour >= "5:00 PM");
+    $("#timeBlock2pm").toggleClass("future", currentHour >= 17);
+    $("#timeBlock2pm").toggleClass("past", currentHour >= 17);
 
-    // $("#timeBlock3pm").removeClass("future", currentHour >= "5:00 PM");
-    // $("#timeBlock3pm").addClass("past", currentHour >= "5:00 PM");
+    $("#timeBlock3pm").toggleClass("future", currentHour >= 17);
+    $("#timeBlock3pm").toggleClass("past", currentHour >= 17);
 
-    // $("#timeBlock4pm").removeClass("future", currentHour >= "5:00 PM");
-    // $("#timeBlock4pm").addClass("past", currentHour >= "5:00 PM");
+    $("#timeBlock4pm").toggleClass("future", currentHour >= 17);
+    $("#timeBlock4pm").toggleClass("past", currentHour >= 17);
 
-    // $("#timeBlock5pm").removeClass("future", currentHour >= "5:00 PM");
-    // $("#timeBlock5pm").addClass("past", currentHour >= "5:00 PM");
+    $("#timeBlock5pm").toggleClass("future", currentHour >= 17);
+    $("#timeBlock5pm").toggleClass("past", currentHour >= 17);
   }
 
   // Load time immediately, check hour related to timeblock value and current time
