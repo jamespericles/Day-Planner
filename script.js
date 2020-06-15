@@ -93,8 +93,7 @@ $(document).ready(function () {
     $("#timeBlock5pm").toggleClass("past", tag5HourVal > currentHour);
     $("#timeBlock5pm").toggleClass("future", tag5HourVal < currentHour);
 
-    // Recombine currentHour because we need to
-    // specify if we're past 5pm rather than comparing just the hour "5"
+    // Rewrite to toggle, convert strings to integers, military time
     // currentHour = localTime.join(":");
 
     // $("#timeBlock9am").removeClass("future", currentHour >= "5:00 PM");
