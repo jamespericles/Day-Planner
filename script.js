@@ -9,6 +9,7 @@ $(document).ready(function () {
   // Call and display the time using moment.js
   function updateTime() {
     const time = moment();
+    console.log(n);
     const eDisplayMoment = document.getElementById("currentDay");
     eDisplayMoment.innerHTML = time.format("M-D-YYYY hh:mm:ss");
   }
@@ -58,82 +59,186 @@ $(document).ready(function () {
     // let localTime = hour.split(":");
     let currentHour = n;
     // Check whether the time is in the past, present, or future, append the appropriate class
-    $("#timeBlock9am").toggleClass("present", tag9HourVal == currentHour);
-    $("#timeBlock9am").toggleClass("past", tag9HourVal > currentHour);
-    $("#timeBlock9am").toggleClass("future", tag9HourVal < currentHour);
 
-    console.log(
-      tag9HourVal,
-      tag10HourVal,
-      tag11HourVal,
-      tag12HourVal,
-      tag1HourVal,
-      tag2HourVal,
-      tag3HourVal,
-      tag4HourVal,
-      tag5HourVal
-    );
-    $("#timeBlock10am").toggleClass("present", tag10HourVal == currentHour);
-    $("#timeBlock10am").toggleClass("past", tag10HourVal < currentHour);
-    $("#timeBlock10am").toggleClass("future", tag10HourVal > currentHour);
+    if (tag9HourVal === currentHour) {
+      $("#timeBlock9am").addClass("present");
+      $("#timeBlock9am").removeClass("future");
+      $("#timeBlock9am").removeClass("past");
+    } else if (tag9HourVal <= currentHour) {
+      $("#timeBlock9am").removeClass("present");
+      $("#timeBlock9am").removeClass("future");
+      $("#timeBlock9am").addClass("past");
+    } else if (tag9HourVal >= currentHour) {
+      $("#timeBlock9am").addClass("future");
+      $("#timeBlock9am").removeClass("present");
+      $("#timeBlock9am").removeClass("past");
+    }
 
-    $("#timeBlock11am").toggleClass("present", tag11HourVal == currentHour);
-    $("#timeBlock11am").toggleClass("past", tag11HourVal < currentHour);
-    $("#timeBlock11am").toggleClass("future", tag11HourVal > currentHour);
+    if (tag10HourVal === currentHour) {
+      $("#timeBlock10am").addClass("present");
+      $("#timeBlock10am").removeClass("future");
+      $("#timeBlock10am").removeClass("past");
+    } else if (tag10HourVal <= currentHour) {
+      $("#timeBlock10am").removeClass("present");
+      $("#timeBlock10am").removeClass("future");
+      $("#timeBlock10am").addClass("past");
+    } else if (tag10HourVal >= currentHour) {
+      $("#timeBlock10am").addClass("future");
+      $("#timeBlock10am").removeClass("present");
+      $("#timeBlock10am").removeClass("past");
+    }
 
-    $("#timeBlock12pm").toggleClass("present", tag12HourVal == currentHour);
-    $("#timeBlock12pm").toggleClass("past", tag12HourVal < currentHour);
-    $("#timeBlock12pm").toggleClass("future", tag12HourVal > currentHour);
+    if (tag11HourVal === currentHour) {
+      $("#timeBlock11am").addClass("present");
+      $("#timeBlock11am").removeClass("future");
+      $("#timeBlock11am").removeClass("past");
+    } else if (tag11HourVal <= currentHour) {
+      $("#timeBlock11am").removeClass("present");
+      $("#timeBlock11am").removeClass("future");
+      $("#timeBlock11am").addClass("past");
+    } else if (tag11HourVal >= currentHour) {
+      $("#timeBlock11am").addClass("future");
+      $("#timeBlock11am").removeClass("present");
+      $("#timeBlock11am").removeClass("past");
+    }
 
-    $("#timeBlock1pm").toggleClass("present", tag1HourVal == currentHour);
-    $("#timeBlock1pm").toggleClass("past", tag1HourVal > currentHour);
-    $("#timeBlock1pm").toggleClass("future", tag1HourVal < currentHour);
+    if (tag12HourVal === currentHour) {
+      $("#timeBlock12pm").addClass("present");
+      $("#timeBlock12pm").removeClass("future");
+      $("#timeBlock12pm").removeClass("past");
+    } else if (tag12HourVal <= currentHour) {
+      $("#timeBlock12pm").removeClass("present");
+      $("#timeBlock12pm").removeClass("future");
+      $("#timeBlock12pm").addClass("past");
+    } else if (tag12HourVal >= currentHour) {
+      $("#timeBlock12pm").addClass("future");
+      $("#timeBlock12pm").removeClass("present");
+      $("#timeBlock12pm").removeClass("past");
+    }
 
-    $("#timeBlock2pm").toggleClass("present", tag2HourVal == currentHour);
-    $("#timeBlock2pm").toggleClass("past", tag2HourVal > currentHour);
-    $("#timeBlock2pm").toggleClass("future", tag2HourVal < currentHour);
+    if (tag1HourVal === currentHour) {
+      $("#timeBlock1pm").addClass("present");
+      $("#timeBlock1pm").removeClass("future");
+      $("#timeBlock1pm").removeClass("past");
+    } else if (tag1HourVal <= currentHour) {
+      $("#timeBlock1pm").removeClass("present");
+      $("#timeBlock1pm").removeClass("future");
+      $("#timeBlock1pm").addClass("past");
+    } else if (tag1HourVal >= currentHour) {
+      $("#timeBlock1pm").addClass("future");
+      $("#timeBlock1pm").removeClass("present");
+      $("#timeBlock1pm").removeClass("past");
+    }
 
-    $("#timeBlock3pm").toggleClass("present", tag3HourVal == currentHour);
-    $("#timeBlock3pm").toggleClass("past", tag3HourVal > currentHour);
-    $("#timeBlock3pm").toggleClass("future", tag3HourVal < currentHour);
+    if (tag2HourVal === currentHour) {
+      $("#timeBlock2pm").addClass("present");
+      $("#timeBlock2pm").removeClass("future");
+      $("#timeBlock2pm").removeClass("past");
+    } else if (tag2HourVal <= currentHour) {
+      $("#timeBlock2pm").removeClass("present");
+      $("#timeBlock2pm").removeClass("future");
+      $("#timeBlock2pm").addClass("past");
+    } else if (tag2HourVal >= currentHour) {
+      $("#timeBlock2pm").addClass("future");
+      $("#timeBlock2pm").removeClass("present");
+      $("#timeBlock2pm").removeClass("past");
+    }
 
-    $("#timeBlock4pm").toggleClass("present", tag4HourVal == currentHour);
-    $("#timeBlock4pm").toggleClass("past", tag4HourVal > currentHour);
-    $("#timeBlock4pm").toggleClass("future", tag4HourVal < currentHour);
+    if (tag3HourVal === currentHour) {
+      $("#timeBlock3pm").addClass("present");
+      $("#timeBlock3pm").removeClass("future");
+      $("#timeBlock3pm").removeClass("past");
+    } else if (tag3HourVal <= currentHour) {
+      $("#timeBlock3pm").removeClass("present");
+      $("#timeBlock3pm").removeClass("future");
+      $("#timeBlock3pm").addClass("past");
+    } else if (tag3HourVal >= currentHour) {
+      $("#timeBlock3pm").addClass("future");
+      $("#timeBlock3pm").removeClass("present");
+      $("#timeBlock3pm").removeClass("past");
+    }
 
-    $("#timeBlock5pm").toggleClass("present", tag5HourVal == currentHour);
-    $("#timeBlock5pm").toggleClass("past", tag5HourVal > currentHour);
-    $("#timeBlock5pm").toggleClass("future", tag5HourVal < currentHour);
+    if (tag4HourVal === currentHour) {
+      $("#timeBlock4pm").addClass("present");
+      $("#timeBlock4pm").removeClass("future");
+      $("#timeBlock4pm").removeClass("past");
+    } else if (tag4HourVal <= currentHour) {
+      $("#timeBlock4pm").removeClass("present");
+      $("#timeBlock4pm").removeClass("future");
+      $("#timeBlock4pm").addClass("past");
+    } else if (tag4HourVal >= currentHour) {
+      $("#timeBlock4pm").addClass("future");
+      $("#timeBlock4pm").removeClass("present");
+      $("#timeBlock4pm").removeClass("past");
+    }
+
+    if (tag5HourVal === currentHour) {
+      $("#timeBlock5pm").addClass("present");
+      $("#timeBlock5pm").removeClass("future");
+      $("#timeBlock5pm").removeClass("past");
+    } else if (tag5HourVal <= currentHour) {
+      $("#timeBlock5pm").removeClass("present");
+      $("#timeBlock5pm").removeClass("future");
+      $("#timeBlock5pm").addClass("past");
+    } else if (tag5HourVal >= currentHour) {
+      $("#timeBlock5pm").addClass("future");
+      $("#timeBlock5pm").removeClass("present");
+      $("#timeBlock5pm").removeClass("past");
+    }
+    // $("#timeBlock10am").toggleClass("present", n == currentHour);
+    // $("#timeBlock10am").toggleClass("past", n < currentHour);
+    // $("#timeBlock30am").toggleClass("future", n > currentHour);3
+    // $("#timeBlock31am").toggleClass("present", n == currentHour);
+    // $("#timeBlock11am").toggleClass("past", n < currentHour);
+    // $("#timeBlock31am").toggleClass("future", n > currentHour);3
+    // $("#timeBlock32pm").toggleClass("present", n == currentHour);
+    // $("#timeBlock12pm").toggleClass("past", n < currentHour);
+    // $("#timeBlock32pm").toggleClass("future", n > currentHour);3
+    // $("#timeBlock3pm").toggleClass("present", n == currentHour);
+    // $("#timeBlock1pm").toggleClass("past", n > currentHour);
+    // $("#timeBlock1pm").toggleClass("future", n < currentHour);
+
+    // $("#timeBlock2pm").toggleClass("present", n == currentHour);
+    // $("#timeBlock2pm").toggleClass("past", n > currentHour);
+    // $("#timeBlock2pm").toggleClass("future", n < currentHour);4
+    // $("#timeBlock4pm").toggleClass("present", n == currentHour);
+    // $("#timeBlock3pm").toggleClass("past", n > currentHour);
+    // $("#timeBlock4pm").toggleClass("future", n < currentHour);4
+    // $("#timeBlock4pm").toggleClass("present", n == currentHour);
+    // $("#timeBlock4pm").toggleClass("past", n > currentHour);
+    // $("#timeBlock4pm").toggleClass("future", n < currentHour);
+
+    // $("#timeBlock5pm").toggleClass("present", n == currentHour);
+    // $("#timeBlock5pm").toggleClass("past", n > currentHour);
+    // $("#timeBlock5pm").toggleClass("future", n < currentHour);
 
     // Rewrite to toggle, convert strings to integers, military time
-    // currentHour = localTime.join(":");
+    // currentHour = localTime.join(":");5
+    // $("#timeBlock5am").toggleClass("future", n <= 17);
+    // $("#timeBlock9am").toggleClass("past", n >= 17);5
+    // $("#timeBlock10am").toggleClass("future", n <= 17);
+    // $("#timeBlock50am").toggleClass("past", n >= 17);5
+    // $("#timeBlock11am").toggleClass("future", n <= 17);
+    // $("#timeBlock11am").toggleClass("past", n >= 17);
 
-    $("#timeBlock9am").toggleClass("future", currentHour >= 17);
-    $("#timeBlock9am").toggleClass("past", currentHour >= 17);
+    // $("#timeBlock12pm").toggleClass("future", n <= 17);
+    // $("#timeBlock12pm").toggleClass("past", n >= 17);
 
-    $("#timeBlock10am").toggleClass("future", currentHour >= 17);
-    $("#timeBlock10am").toggleClass("past", currentHour >= 17);
+    // $("#timeBlock1pm").toggleClass("future", n <= 17);
+    // $("#timeBlock1pm").toggleClass("past", n >= 17);
 
-    $("#timeBlock11am").toggleClass("future", currentHour >= 17);
-    $("#timeBlock11am").toggleClass("past", currentHour >= 17);
+    // $("#timeBlock2pm").toggleClass("future", n <= 17);
+    // $("#timeBlock2pm").toggleClass("past", n >= 17);
 
-    $("#timeBlock12pm").toggleClass("future", currentHour >= 17);
-    $("#timeBlock12pm").toggleClass("past", currentHour >= 17);
+    // $("#timeBlock3pm").toggleClass("future", n <= 17);
+    // $("#timeBlock3pm").toggleClass("past", n >= 17);
 
-    $("#timeBlock1pm").toggleClass("future", currentHour >= 17);
-    $("#timeBlock1pm").toggleClass("past", currentHour >= 17);
+    // $("#timeBlock4pm").toggleClass("future", n <= 17);
+    // $("#timeBlock4pm").toggleClass("past", n >= 17);
+    // $("#timeBlock4pm").toggleClass("present", n == n);
 
-    $("#timeBlock2pm").toggleClass("future", currentHour >= 17);
-    $("#timeBlock2pm").toggleClass("past", currentHour >= 17);
-
-    $("#timeBlock3pm").toggleClass("future", currentHour >= 17);
-    $("#timeBlock3pm").toggleClass("past", currentHour >= 17);
-
-    $("#timeBlock4pm").toggleClass("future", currentHour >= 17);
-    $("#timeBlock4pm").toggleClass("past", currentHour >= 17);
-
-    $("#timeBlock5pm").toggleClass("future", currentHour >= 17);
-    $("#timeBlock5pm").toggleClass("past", currentHour >= 17);
+    // $("#timeBlock5pm").toggleClass("future", n <= 17);
+    // $("#timeBlock5pm").toggleClass("past", n <= 17);
   }
 
   // Load time immediately, check hour related to timeblock value and current time
