@@ -55,23 +55,23 @@ $(document).ready(function () {
     const hour = moment().format("LT");
     let localTime = hour.split(":");
     let currentHour = localTime[0];
-
+    currentHour = 9;
     // Check whether the time is in the past, present, or future, append the appropriate class
     $("#timeBlock9am").toggleClass("present", tag9HourVal == currentHour);
     $("#timeBlock9am").toggleClass("past", tag9HourVal > currentHour);
     $("#timeBlock9am").toggleClass("future", tag9HourVal < currentHour);
 
     $("#timeBlock10am").toggleClass("present", tag10HourVal == currentHour);
-    $("#timeBlock10am").toggleClass("past", tag10HourVal > currentHour);
-    $("#timeBlock10am").toggleClass("future", tag10HourVal < currentHour);
+    $("#timeBlock10am").toggleClass("past", tag10HourVal < currentHour);
+    $("#timeBlock10am").toggleClass("future", tag10HourVal > currentHour);
 
     $("#timeBlock11am").toggleClass("present", tag11HourVal == currentHour);
-    $("#timeBlock11am").toggleClass("past", tag11HourVal > currentHour);
-    $("#timeBlock11am").toggleClass("future", tag11HourVal < currentHour);
+    $("#timeBlock11am").toggleClass("past", tag11HourVal < currentHour);
+    $("#timeBlock11am").toggleClass("future", tag11HourVal > currentHour);
 
     $("#timeBlock12pm").toggleClass("present", tag12HourVal == currentHour);
-    $("#timeBlock12pm").toggleClass("past", tag12HourVal > currentHour);
-    $("#timeBlock12pm").toggleClass("future", tag12HourVal < currentHour);
+    $("#timeBlock12pm").toggleClass("past", tag12HourVal < currentHour);
+    $("#timeBlock12pm").toggleClass("future", tag12HourVal > currentHour);
 
     $("#timeBlock1pm").toggleClass("present", tag1HourVal == currentHour);
     $("#timeBlock1pm").toggleClass("past", tag1HourVal > currentHour);
@@ -95,34 +95,34 @@ $(document).ready(function () {
 
     // Recombine currentHour because we need to
     // specify if we're past 5pm rather than comparing just the hour "5"
-    currentHour = localTime.join(":");
+    // currentHour = localTime.join(":");
 
-    $("#timeBlock9am").removeClass("future", currentHour >= "5:00 PM");
-    $("#timeBlock9am").addClass("past", currentHour >= "5:00 PM");
+    // $("#timeBlock9am").removeClass("future", currentHour >= "5:00 PM");
+    // $("#timeBlock9am").addClass("past", currentHour >= "5:00 PM");
 
-    $("#timeBlock10am").removeClass("future", currentHour >= "5:00 PM");
-    $("#timeBlock10am").addClass("past", currentHour >= "5:00 PM");
+    // $("#timeBlock10am").removeClass("future", currentHour >= "5:00 PM");
+    // $("#timeBlock10am").addClass("past", currentHour >= "5:00 PM");
 
-    $("#timeBlock11am").removeClass("future", currentHour >= "5:00 PM");
-    $("#timeBlock11am").addClass("past", currentHour >= "5:00 PM");
+    // $("#timeBlock11am").removeClass("future", currentHour >= "5:00 PM");
+    // $("#timeBlock11am").addClass("past", currentHour >= "5:00 PM");
 
-    $("#timeBlock12pm").removeClass("future", currentHour >= "5:00 PM");
-    $("#timeBlock12pm").addClass("past", currentHour >= "5:00 PM");
+    // $("#timeBlock12pm").removeClass("future", currentHour >= "5:00 PM");
+    // $("#timeBlock12pm").addClass("past", currentHour >= "5:00 PM");
 
-    $("#timeBlock1pm").removeClass("future", currentHour >= "5:00 PM");
-    $("#timeBlock1pm").addClass("past", currentHour >= "5:00 PM");
+    // $("#timeBlock1pm").removeClass("future", currentHour >= "5:00 PM");
+    // $("#timeBlock1pm").addClass("past", currentHour >= "5:00 PM");
 
-    $("#timeBlock2pm").removeClass("future", currentHour >= "5:00 PM");
-    $("#timeBlock2pm").addClass("past", currentHour >= "5:00 PM");
+    // $("#timeBlock2pm").removeClass("future", currentHour >= "5:00 PM");
+    // $("#timeBlock2pm").addClass("past", currentHour >= "5:00 PM");
 
-    $("#timeBlock3pm").removeClass("future", currentHour >= "5:00 PM");
-    $("#timeBlock3pm").addClass("past", currentHour >= "5:00 PM");
+    // $("#timeBlock3pm").removeClass("future", currentHour >= "5:00 PM");
+    // $("#timeBlock3pm").addClass("past", currentHour >= "5:00 PM");
 
-    $("#timeBlock4pm").removeClass("future", currentHour >= "5:00 PM");
-    $("#timeBlock4pm").addClass("past", currentHour >= "5:00 PM");
+    // $("#timeBlock4pm").removeClass("future", currentHour >= "5:00 PM");
+    // $("#timeBlock4pm").addClass("past", currentHour >= "5:00 PM");
 
-    $("#timeBlock5pm").removeClass("future", currentHour >= "5:00 PM");
-    $("#timeBlock5pm").addClass("past", currentHour >= "5:00 PM");
+    // $("#timeBlock5pm").removeClass("future", currentHour >= "5:00 PM");
+    // $("#timeBlock5pm").addClass("past", currentHour >= "5:00 PM");
   }
 
   // Load time immediately, check hour related to timeblock value and current time
