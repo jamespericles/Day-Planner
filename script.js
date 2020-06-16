@@ -4,6 +4,7 @@ $(document).ready(function () {
   setInterval(updateTime, 1000);
   setInterval(checkHour, 1000);
   const d = new Date();
+
   // Retrieve time in military time so that classes are appended and removed correctly, accounting for am vs pm
   const n = d.getHours();
 
@@ -18,7 +19,6 @@ $(document).ready(function () {
   // Split the value at the colon to compare just the hour of <li> to current hour
   function checkHour() {
     let h2_9Tag = document.getElementById("9");
-    // $("9") change all to jquery
     let tag9Hour = h2_9Tag.textContent.split(":");
     let tag9HourVal = parseInt(tag9Hour[0]);
 
@@ -55,6 +55,7 @@ $(document).ready(function () {
     let tag5HourVal = parseInt(tag5Hour) + 12;
 
     let currentHour = n;
+
     // Check whether the time is in the past, present, or future, append and remove the appropriate classes
 
     if (tag9HourVal === currentHour) {
