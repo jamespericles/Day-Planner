@@ -252,17 +252,4 @@ $(document).ready(function () {
   }
 
   // Grab all clear buttons, add click function
-  for (let i = 0; i < clearBtns.length; i++) {
-    clearBtns[i].addEventListener("click", function (e) {
-      let id = e.target.id;
-      let parentElement = $(`#timeBlock${id}`);
-      let newValue = parentElement.children()[0].value;
-      localStorage.setItem(id, newValue);
-      let input = parentElement.children()[0];
-      //   Clear textfield after user saves event
-      input.value = "";
-      //   Update DOM after user saves new event
-      updateDOM();
-    });
-  }
 });
