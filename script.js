@@ -19,40 +19,40 @@ $(document).ready(function () {
   // Split the value at the colon to compare just the hour of <li> to current hour
   function checkHour() {
     // unable to do jquery because of split function?
-    let h2_9Tag = document.getElementById("9");
-    let tag9Hour = h2_9Tag.textContent.split(":");
+    let h2_9Tag = $("#9");
+    let tag9Hour = h2_9Tag[0].textContent.split(":");
     let tag9HourVal = parseInt(tag9Hour[0]);
 
-    let h2_10Tag = document.getElementById("10");
-    let tag10Hour = h2_10Tag.textContent.split(":");
+    let h2_10Tag = $("#10");
+    let tag10Hour = h2_10Tag[0].textContent.split(":");
     let tag10HourVal = parseInt(tag10Hour[0]);
 
-    let h2_11Tag = document.getElementById("11");
-    let tag11Hour = h2_11Tag.textContent.split(":");
+    let h2_11Tag = $("#11");
+    let tag11Hour = h2_11Tag[0].textContent.split(":");
     let tag11HourVal = parseInt(tag11Hour[0]);
 
-    let h2_12Tag = document.getElementById("12");
-    let tag12Hour = h2_12Tag.textContent.split(":");
+    let h2_12Tag = $("#12");
+    let tag12Hour = h2_12Tag[0].textContent.split(":");
     let tag12HourVal = parseInt(tag12Hour[0]);
 
-    let h2_1Tag = document.getElementById("13");
-    let tag1Hour = h2_1Tag.textContent;
+    let h2_1Tag = $("#13");
+    let tag1Hour = h2_1Tag[0].textContent;
     let tag1HourVal = parseInt(tag1Hour) + 12;
 
-    let h2_2Tag = document.getElementById("14");
-    let tag2Hour = h2_2Tag.textContent.split(":");
+    let h2_2Tag = $("#14");
+    let tag2Hour = h2_2Tag[0].textContent.split(":");
     let tag2HourVal = parseInt(tag2Hour) + 12;
 
-    let h2_3Tag = document.getElementById("15");
-    let tag3Hour = h2_3Tag.textContent.split(":");
+    let h2_3Tag = $("#15");
+    let tag3Hour = h2_3Tag[0].textContent.split(":");
     let tag3HourVal = parseInt(tag3Hour) + 12;
 
-    let h2_4Tag = document.getElementById("16");
-    let tag4Hour = h2_4Tag.textContent.split(":");
+    let h2_4Tag = $("#16");
+    let tag4Hour = h2_4Tag[0].textContent.split(":");
     let tag4HourVal = parseInt(tag4Hour) + 12;
 
-    let h2_5Tag = document.getElementById("17");
-    let tag5Hour = h2_5Tag.textContent.split(":");
+    let h2_5Tag = $("#17");
+    let tag5Hour = h2_5Tag[0].textContent.split(":");
     let tag5HourVal = parseInt(tag5Hour) + 12;
 
     let currentHour = n;
