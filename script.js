@@ -231,10 +231,29 @@ $(document).ready(function () {
   }
   //   Execute update function before listening for more user input
   updateDOM();
-  const saveBtns = $(".saveBtn");
 
+  // Button Functionality
+  const saveBtns = $(".saveBtn");
+  const clearBtns = $(".clearBtn");
+
+  // Grab all save buttons, add click function
   for (let i = 0; i < saveBtns.length; i++) {
     saveBtns[i].addEventListener("click", function (e) {
+      let id = e.target.id;
+      let parentElement = $(`#timeBlock${id}`);
+      let newValue = parentElement.children()[0].value;
+      localStorage.setItem(id, newValue);
+      let input = parentElement.children()[0];
+      //   Clear textfield after user saves event
+      input.value = "";
+      //   Update DOM after user saves new event
+      updateDOM();
+    });
+  }
+
+  // Grab all clear buttons, add click function
+  for (let i = 0; i < clearBtns.length; i++) {
+    clearBtns[i].addEventListener("click", function (e) {
       let id = e.target.id;
       let parentElement = $(`#timeBlock${id}`);
       let newValue = parentElement.children()[0].value;
