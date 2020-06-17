@@ -236,6 +236,7 @@ $(document).ready(function () {
   // Button Functionality
   const saveBtns = $(".saveBtn");
   const clearBtns = $(".clearBtn");
+  const editBtns = $(".editBtn");
 
   // Grab all save buttons, add click function
   for (let i = 0; i < saveBtns.length; i++) {
@@ -256,7 +257,14 @@ $(document).ready(function () {
       let id = c.target.id;
       let parentElement = $(`#timeBlock${id}`);
       localStorage.clear(id);
+      console.log(id);
       updateDOM();
+    });
+  }
+  for (let i = 0; i < editBtns.length; i++) {
+    editBtns[i].addEventListener("click", function (f) {
+      let id = f.target.id;
+      let parentElement = $(`#timeBlock${id}`);
     });
   }
   // Grab all clear buttons, add click function
