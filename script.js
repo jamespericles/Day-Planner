@@ -18,6 +18,7 @@ $(document).ready(function () {
   // Create array from the string in <h2> elements
   // Split the value at the colon to compare just the hour of <li> to current hour
   function checkHour() {
+    // unable to do jquery because of split function?
     let h2_9Tag = document.getElementById("9");
     let tag9Hour = h2_9Tag.textContent.split(":");
     let tag9HourVal = parseInt(tag9Hour[0]);
