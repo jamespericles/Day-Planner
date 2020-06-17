@@ -251,6 +251,13 @@ $(document).ready(function () {
       updateDOM();
     });
   }
-
+  for (let i = 0; i < clearBtns.length; i++) {
+    clearBtns[i].addEventListener("click", function (c) {
+      let id = c.target.id;
+      let parentElement = $(`#timeBlock${id}`);
+      localStorage.clear(id);
+      updateDOM();
+    });
+  }
   // Grab all clear buttons, add click function
 });
