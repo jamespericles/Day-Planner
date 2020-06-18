@@ -250,19 +250,13 @@ $(document).ready(function () {
       input.value = "";
       //   Update DOM after user saves new event
       updateDOM();
-      console.log(id);
-      console.log(newValue);
     });
   }
-  for (let i = 0; i < clearBtns.length; i++) {
-    clearBtns[i].addEventListener("click", function (c) {
-      let id = c.target.id;
-      let parentElement = $(`#timeBlock${id}`);
-      localStorage.removeItem(id);
-      console.log(id);
-      updateDOM();
-    });
+  function clear() {
+    localStorage.removeItem("9am");
+    updateDOM();
   }
+
   for (let i = 0; i < editBtns.length; i++) {
     editBtns[i].addEventListener("click", function (f) {
       let id = f.target.id;
