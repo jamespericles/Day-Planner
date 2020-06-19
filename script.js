@@ -252,16 +252,4 @@ $(document).ready(function () {
       updateDOM();
     });
   }
-  function clear() {
-    localStorage.removeItem("9am");
-    updateDOM();
-  }
-
-  for (let i = 0; i < editBtns.length; i++) {
-    editBtns[i].addEventListener("click", function (f) {
-      let id = f.target.id;
-      let parentElement = $(`#timeBlock${id}`);
-    });
-  }
-  // Grab all clear buttons, add click function
 });
