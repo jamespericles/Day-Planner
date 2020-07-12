@@ -20,7 +20,7 @@
 
 ### <a name="Description"></a>Description
 
-This application uses JQuery, moment.js and other Front-End technologies to create a planner that reacts to the given time. HTML elements for each time block are updated live based on the whether or not they are in the past, present, or future. The user is also able to create and save events for each time block, which are saved within local storage.
+This application uses JQuery, moment.js and other Front-End technologies to create a planner that reacts to the given time. HTML elements for each time block are updated live based on the whether or not they are in the past, present, or future. The user is also able to create and save events for each time block, which are saved within local storage. The time blocks range from 9 am to 5 pm.
 
 The time block that represents the current time is stylized to be red, while time blocks from the past are stylized to be grey, and those in the future are green. The logic to determine what style to apply to each time block utilizes moment.js, a third-party Javascript library.
 
@@ -35,7 +35,7 @@ This project utilized HTML, CSS, Javascript languages and [moment.js](https://mo
 
 ### <a name="Usage"></a>Usage
 
-Weather Dashboard works in any web browser, and is deployed [here](https://jamespericles.github.io/Day-Planner/)
+Day Planner works in any web browser, and is deployed [here](https://jamespericles.github.io/Day-Planner/)
 
 ### <a name="Contributing"></a>Contributing
 
